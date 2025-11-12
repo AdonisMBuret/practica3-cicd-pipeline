@@ -8,9 +8,9 @@
     "test": "tests"
   },
 
-  "scripts": {
-  "test": "npx jest",
-  "test:coverage": "npx jest --coverage"
+"scripts": {
+  "test": "node node_modules/jest/bin/jest.js",
+  "test:coverage": "node node_modules/jest/bin/jest.js --coverage"
 },
 
   "repository": {
