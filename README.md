@@ -10,8 +10,8 @@ Objetivos cumplidos:
 
 ## Participantes
 - Triana Olivadia García de Jesús (2023-1395)
-- Kaysha Hiciano (2023-1599)
 - Adonis Mercedes Buret (2021-2396)
+- Kaysha Hiciano (2023-1599)
 - Esmerlyn Ledesma (2022-1775)
 
 Trabajo realizado en equipo: Configuración inicial, implementación de pruebas, pipeline y documentación.
