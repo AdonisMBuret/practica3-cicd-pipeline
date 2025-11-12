@@ -24,12 +24,13 @@ jobs:
       - name: Ejecutar pruebas
         run: npm test
 
-      - name: Construir app (si es necesario, para static)
-        run: npm run build  # Agrega un script "build" en package.json si usas un framework
+      # Removido: No necesitamos build para app estática
+      # - name: Construir app (si es necesario, para static)
+      #   run: npm run build  # Solo si agregas un script "build" en package.json
 
       - name: Desplegar a GitHub Pages
         if: github.ref == 'refs/heads/main'  # Solo en push a main
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # O la carpeta de build si tienes (ej: ./dist)
+          publish_dir: ./  # Publica la raíz (HTML/CSS/JS directamente)
