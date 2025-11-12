@@ -1,0 +1,35 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Usa la versión que tengas
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar pruebas
+        run: npm test
+
+      - name: Construir app (si es necesario, para static)
+        run: npm run build  # Agrega un script "build" en package.json si usas un framework
+
+      - name: Desplegar a GitHub Pages
+        if: github.ref == 'refs/heads/main'  # Solo en push a main
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # O la carpeta de build si tienes (ej: ./dist)

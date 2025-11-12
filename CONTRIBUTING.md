@@ -1,0 +1,3 @@
+- Crea una branch: `git checkout -b feature/nueva`
+- Commit y push.
+- Abre Pull Request.
