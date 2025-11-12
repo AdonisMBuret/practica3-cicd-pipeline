@@ -7,10 +7,12 @@
     "doc": "docs",
     "test": "tests"
   },
+
   "scripts": {
-    "test": "jest",
-    "test:coverage": "jest --coverage"
-  },
+  "test": "npx jest",
+  "test:coverage": "npx jest --coverage"
+},
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AdonisMBuret/practica3-cicd-pipeline.git"
