@@ -1,0 +1,35 @@
+{
+  "name": "practica3-cicd-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+
+"scripts": {
+  "test": "node node_modules/jest/bin/jest.js",
+  "test:coverage": "node node_modules/jest/bin/jest.js --coverage"
+},
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdonisMBuret/practica3-cicd-pipeline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AdonisMBuret/practica3-cicd-pipeline/issues"
+  },
+  "homepage": "https://github.com/AdonisMBuret/practica3-cicd-pipeline#readme",
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
